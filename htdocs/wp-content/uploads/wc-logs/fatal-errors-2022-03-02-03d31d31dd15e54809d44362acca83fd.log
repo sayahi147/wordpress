@@ -1,0 +1,19 @@
+2022-03-02T21:48:03+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /opt/lampp/apps/wordpress/htdocs/wp-content/plugins/woocommerce/packages/woocommerce-admin/src/Features/Marketing.php:270
+Stack trace:
+#0 /opt/lampp/apps/wordpress/htdocs/wp-content/plugins/woocommerce/packages/woocommerce-admin/src/Features/Marketing.php(270): count(NULL)
+#1 /opt/lampp/apps/wordpress/htdocs/wp-content/plugins/woocommerce/packages/woocommerce-admin/src/API/Marketing.php(118): Automattic\WooCommerce\Admin\Features\Marketing->get_knowledge_base_posts('marketing')
+#2 /opt/lampp/apps/wordpress/htdocs/wp-includes/rest-api/class-wp-rest-server.php(1141): Automattic\WooCommerce\Admin\API\Marketing->get_knowledge_base_posts(Object(WP_REST_Request))
+#3 /opt/lampp/apps/wordpress/htdocs/wp-includes/rest-api/class-wp-rest-server.php(988): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wc-admin/marke...', Array, NULL)
+#4 /opt/lampp/apps/wordpress/htdocs/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#5 /opt/lampp/apps/wordpress/htdocs/wp-includes/rest-api.php(386): WP_REST_Server->serve_request('/wc-admin/marke...')
+#6 /opt/lampp/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(307): rest_api_loaded(Object(WP))
+#7 /opt/lampp/apps/wordpress/htdocs/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#8 /opt/lampp/apps/wordpress/htdocs/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#9 /opt/lampp/apps/wordpress/htdocs/wp-includes/class-wp.php(396): do_action_ref_array('parse_request', Array)
+#10 /opt/lampp/apps/wordpress/htdocs/wp-includes/class-wp.php(758): WP->parse_request('')
+#11 /opt/lampp/apps/wordpress/htdocs/wp-includes/functions.php(1310): WP->main('')
+#12 /opt/lampp/apps/wordpress/htdocs/wp-blog-header.php(16): wp()
+#13 /opt/lampp/apps/wordpress/htdocs/index.php(17): require('/opt/lampp/apps...')
+#14 {main}
+  thrown in /opt/lampp/apps/wordpress/htdocs/wp-content/plugins/woocommerce/packages/woocommerce-admin/src/Features/Marketing.php on line 270
+
